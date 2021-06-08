@@ -136,7 +136,7 @@ public class Camera {
     this.dartMessenger = dartMessenger;
     this.cameraManager = (CameraManager) activity.getSystemService(Context.CAMERA_SERVICE);
     this.applicationContext = activity.getApplicationContext();
-    this.flashMode = FlashMode.auto;
+    this.flashMode = FlashMode.off;
     this.exposureMode = ExposureMode.auto;
     this.focusMode = FocusMode.auto;
     this.exposureOffset = 0;
