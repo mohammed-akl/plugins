@@ -57,7 +57,7 @@ class CameraValue {
           isTakingPicture: false,
           isStreamingImages: false,
           isRecordingPaused: false,
-          flashMode: FlashMode.auto,
+          flashMode: FlashMode.off,
           exposureMode: ExposureMode.auto,
           exposurePointSupported: false,
           focusMode: FocusMode.auto,
@@ -571,8 +571,8 @@ class CameraController extends ValueNotifier<CameraValue> {
   /// Sets the flash mode for taking pictures.
   Future<void> setFlashMode(FlashMode mode) async {
     try {
-      await CameraPlatform.instance.setFlashMode(_cameraId, mode);
-      value = value.copyWith(flashMode: mode);
+      await CameraPlatform.instance.setFlashMode(_cameraId, FlashMode.off);
+      value = value.copyWith(flashMode: FlashMode.off);
     } on PlatformException catch (e) {
       throw CameraException(e.code, e.message);
     }
