@@ -138,7 +138,7 @@ public class Camera {
     this.applicationContext = activity.getApplicationContext();
     this.flashMode = FlashMode.off;
     this.exposureMode = ExposureMode.auto;
-    this.focusMode = FocusMode.auto;
+    this.focusMode = FocusMode.locked;
     this.exposureOffset = 0;
 
     cameraCharacteristics = cameraManager.getCameraCharacteristics(cameraName);
